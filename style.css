@@ -1,0 +1,21 @@
+.timer {
+  display: flex;
+  background-color: lightgray;
+  max-width: 290px;
+}
+
+.field {
+  background-color: darkgray;
+  min-width: 60px;
+  border: black solid 1px;
+  margin: 5px;
+}
+
+span {
+  display: block;
+  text-align: center;
+}
+
+.value {
+  font-size: 30px;
+}
