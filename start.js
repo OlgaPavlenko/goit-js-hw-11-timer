@@ -7,19 +7,24 @@ const refs = {
   innerSecs: document.querySelector('span[data-value=secs]')
 }
 
-  
+timer();
+
 const startTimer = function() {
     setInterval(() => {
-        const currentTime = Date.now();
-        const deltaTime = targetDate - currentTime;
-        const { days, hours, mins, secs } = getTimeComponents(deltaTime);
-
-       refs.innerDays.textContent = days;
-       refs.innerHours.textContent = hours;
-       refs.innerMins.textContent = mins;
-       refs.innerSecs.textContent = secs;
+      timer();
     }
     , 1000)
+}
+
+function timer() {
+  const currentTime = Date.now();
+  const deltaTime = targetDate - currentTime;
+  const { days, hours, mins, secs } = getTimeComponents(deltaTime);
+
+ refs.innerDays.textContent = days;
+ refs.innerHours.textContent = hours;
+ refs.innerMins.textContent = mins;
+ refs.innerSecs.textContent = secs;
 }
 
 startTimer();
