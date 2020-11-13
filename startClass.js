@@ -12,11 +12,11 @@ class CountdownTimer {
 
   getRefs() {
     const refs = {};
-    (refs.timer = document.querySelector(selector)),
-      (refs.innerDays = refs.timer.querySelector('span[data-value=days]')),
-      (refs.innerHours = refs.timer.querySelector('span[data-value=hours]')),
-      (refs.innerMins = refs.timer.querySelector('span[data-value=mins]')),
-      (refs.innerSecs = refs.timer.querySelector('span[data-value=secs]'));
+    refs.timer = document.querySelector(selector);
+    refs.innerDays = refs.timer.querySelector('span[data-value=days]');
+    refs.innerHours = refs.timer.querySelector('span[data-value=hours]');
+    refs.innerMins = refs.timer.querySelector('span[data-value=mins]');
+    refs.innerSecs = refs.timer.querySelector('span[data-value=secs]');
 
     return refs;
   }
